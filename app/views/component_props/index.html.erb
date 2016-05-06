@@ -1,0 +1,41 @@
+<%= link_to 'Back to Admin', admin_path, class: "btn btn-danger" %>
+
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Component Props</h1>
+
+<div class="row">
+  <div class="col-sm-3">
+    <h4>Component Name</h4>
+  </div>
+  <div class="col-sm-3">
+    <h4> Prop name</h4>
+  </div>
+</div>
+
+
+<div class="row">
+  <% @component_props.each do |component_prop| %>
+  <div class="row well">
+    <div class="col-sm-3">
+      <%= component_prop.react_component.nickname %>
+    </div>
+    <div class="col-sm-3">
+      <%= component_prop.prop_name %>
+    </div>
+    <!-- <div class="col-sm-2">
+      <%= link_to 'Show', component_prop, class:"btn btn-info" %>
+    </div> -->
+    <div class="col-sm-2">
+      <%= link_to 'Edit', edit_component_prop_path(component_prop), class:"btn btn-primary" %>
+    </div>
+    <div class="col-sm-2">
+      <%= link_to 'Destroy', component_prop, method: :delete, class:"btn btn-danger", data: { confirm: 'Are you sure?' } %>
+    </div>
+  </div>
+  <% end %>
+</div>
+
+<br>
+
+<%= link_to 'New Component prop', new_component_prop_path, class:"btn btn-success" %>

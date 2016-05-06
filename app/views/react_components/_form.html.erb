@@ -1,0 +1,31 @@
+<%= form_for(@react_component) do |f| %>
+  <% if @react_component.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@react_component.errors.count, "error") %> prohibited this react_component from being saved:</h2>
+
+      <ul>
+      <% @react_component.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+
+  <div class="row">
+    <div class="col-sm-6">
+      <%= f.label :component_name %><br>
+      <%= f.text_field :component_name, :class => "form-control" %>
+      <%# TODO: Generate a list of component names from /assets/javascripts/components/shared-components %>
+    </div>
+
+    <div class="col-sm-6">
+      <%= f.label :nickname %><br>
+      <%= f.text_field :nickname, :class => "form-control" %>
+    </div>
+  </div>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

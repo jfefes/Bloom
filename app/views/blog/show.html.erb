@@ -1,0 +1,11 @@
+<p id="notice"><%= notice %></p>
+
+<section class="container above-fold blog-show">
+  <div class="blog-img-container">
+    <%= image_tag(@article.image_link, class: "img-responsive hero-shot") %>
+  </div>
+  <div class="fb-share-button" data-href="<%='http://solid-broadheads.com/blog/#{@article.slug}' %>" data-layout="button"></div>
+  <h1><%= @article.title %></h1>
+  <%= render html: @article.text.html_safe %>
+<%= link_to 'Back', '/blog', class:"btn btn-primary" %>
+</section>

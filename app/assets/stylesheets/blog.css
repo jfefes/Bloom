@@ -1,0 +1,19 @@
+section.above-fold {
+  margin-top: 8rem;
+}
+
+section.blog-show div.blog-img-container {
+  overflow: hidden;
+  height: 50vh;
+}
+
+section.show-blog img.hero-shot {
+
+}
+
+section.blog-show h1 {
+  font-size: 4rem;
+  margin: 0.67em 0;
+  text-align: center;
+  font-weight: 600;
+}

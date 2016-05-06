@@ -1,0 +1,16 @@
+<p id="notice"><%= notice %></p>
+
+<section class="container above-fold">
+<h1>Solid Broadheads Blog</h1>
+
+
+  <% @articles.each do |article| %>
+    <div>
+      <h1><%= link_to article.title, 'blog/' + article.slug %></h1>
+      <%=h strip_tags(article.text.truncate_words(25)) %> <br>
+      <strong>
+        <%= link_to 'Read More...', 'blog/' + article.slug %>
+      </strong>
+
+  <% end %>
+</section>

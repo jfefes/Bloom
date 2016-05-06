@@ -1,0 +1,28 @@
+<div class="container">
+
+  <p id="notice"><%= notice %></p>
+
+  <h1>Admin Dashboard</h1>  <%# TODO: Make this feel like much more of a dashboard %>
+
+  <div class="row">
+    <div class="well col-sm-6">
+        <h4>Blog Posts: <%= @articleCount %> </h4>
+
+        <%= link_to 'View All', articles_path, class: "btn btn-info" %>
+        <%= link_to 'New Blog Post', new_article_path, class: "btn btn-info" %>
+    </div>
+
+    <div class="well col-sm-3">
+      Components <br>
+      <%# TODO: Finish up CMS, add links %>
+      <%= link_to 'Components', react_components_path, class: "btn btn-danger" %> <br> <br>
+      <%= link_to 'Component Props', component_props_path, class: "btn btn-danger" %>
+    </div>
+
+    <div class="well col-sm-3">
+      Pages <br>
+      <%= link_to 'Pages', pages_path, class: "btn btn-danger" %>
+      <%= link_to 'Page Components', page_components_path, class: "btn btn-danger" %>
+    </div>
+  </div>
+</div>

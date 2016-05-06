@@ -1,0 +1,31 @@
+<%= link_to 'Back to Admin', admin_path, class: "btn btn-danger" %>
+
+<h1>Editing Page Component</h1>
+
+
+<%= form_for @page_component, html: {class: "form-group", multipart: true} do |f| %>
+  <% if @page_component.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@page_component.errors.count, "error") %> prohibited this page_component from being saved:</h2>
+
+      <ul>
+      <% @page_component.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+<div class="row">
+  <div class="col-sm-4">
+    <%= f.label :order %><br>
+    <%= f.text_field :order, :class => "form-control" %>
+  </div>
+</div>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
+
+
+<%= link_to 'Back', page_components_path %>

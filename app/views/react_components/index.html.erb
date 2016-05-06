@@ -1,0 +1,40 @@
+<%= link_to 'Back to Admin', admin_path, class: "btn btn-danger" %>
+
+<p id="notice"><%= notice %></p>
+
+<h1>Listing React Components</h1>
+<div class="row">
+    <div class="col-sm-2">
+      <h3>Component Name</h3>
+    </div>
+
+    <div class="col-sm-2">
+      <h3>Handle</h3>
+    </div>
+  </div>
+
+  <% @react_components.each do |react_component| %>
+    <div class="row well">
+
+      <div class="col-sm-2">
+        <strong><%= react_component.component_name %></strong>
+      </div>
+
+      <div class="col-sm-2">
+        <strong><%= react_component.nickname %></strong>
+      </div>
+
+      <div class="col-sm-2">
+        <%= link_to 'Edit', edit_react_component_path(react_component), class:"btn btn-primary"  %>
+      </div>
+
+      <div class="col-sm-2">
+        <%= link_to 'Destroy', react_component, method: :delete,
+                                    class:"btn btn-danger",
+                                    data: { confirm: 'Are you sure?' } %>
+      </div>
+    </div>
+  <% end %>
+
+
+<%= link_to 'New React component', new_react_component_path %>

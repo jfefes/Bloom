@@ -1,0 +1,11 @@
+<%= link_to 'Back to Admin', admin_path, class: "btn btn-danger" %>
+
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Page:</strong>
+  <%= @page_component.page %>
+</p>
+
+<%= link_to 'Edit', edit_page_component_path(@page_component) %> |
+<%= link_to 'Back', page_components_path %>

@@ -1,0 +1,16 @@
+<%= link_to 'Back to Admin', admin_path, class: "btn btn-danger" %>
+
+<p id="notice"><%= notice %></p>
+
+<div class="row well">
+  <div class="col-sm-3">
+    <%= @component_prop.react_component.nickname %>
+  </div>
+  <div class="col-sm-3">
+    <%= @component_prop.prop_name %>
+  </div>
+
+</div>
+
+<%= link_to 'Edit', edit_component_prop_path(@component_prop) %> |
+<%= link_to 'Back', component_props_path %>

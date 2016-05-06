@@ -1,0 +1,12 @@
+== Bloom
+
+The philosophy behind Bloom is simple- A developer-first CMS, leveraging the power of Rails on the backend and React on the frontend.
+
+Example:
+* An example page has been created and can be viewed at localhost:3000/example
+
+* The component rendered on this page is located in /app/assets/javascripts/components/shared-components
+
+== Requirements
+
+Out-of-the-box Bloom only requires a Postgres database to get started. To change the database provider, simply update config/database.rb and your gem file.

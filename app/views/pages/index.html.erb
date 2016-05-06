@@ -1,0 +1,46 @@
+<%= link_to 'Back to Admin', admin_path, class: "btn btn-danger" %>
+
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Pages</h1>
+
+  <div class="row">
+    <div class="col-sm-2">
+      <h3>Title</h3>
+    </div>
+
+    <div class="col-sm-2">
+      <h3>Slug</h3>
+    </div>
+  </div>
+
+  <% @pages.each do |page| %>
+    <div class="well">
+      <div class="row">
+        <div class="col-sm-2">
+          <strong><%= page.title %></strong>
+        </div>
+
+        <div class="col-sm-2">
+          <strong><%= page.slug %></strong>
+        </div>
+
+        <div class="col-sm-2">
+          <%= link_to 'Show', page, class:"btn btn-info"  %>
+        </div>
+
+        <div class="col-sm-2">
+          <%= link_to 'Edit', edit_page_path(page), class:"btn btn-primary"  %>
+        </div>
+
+        <div class="col-sm-2">
+          <%= link_to 'Destroy', page, method: :delete,
+                                      class:"btn btn-danger",
+                                      data: { confirm: 'Are you sure?' } %>
+        </div>
+      </div>
+    </div>
+  <% end %>
+<br>
+
+<%= link_to 'New Page', new_page_path, class:"btn btn-success" %>

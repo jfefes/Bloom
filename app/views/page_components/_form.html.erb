@@ -1,0 +1,43 @@
+<%= form_for @page_component, html: {class: "form-group", multipart: true} do |f| %>
+  <% if @page_component.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@page_component.errors.count, "error") %> prohibited this page_component from being saved:</h2>
+
+      <ul>
+      <% @page_component.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+<div class="row">
+
+  <div class="col-sm-4">
+    <%= f.label :page_id %> <strong>(Dropdown)</strong><br>
+    <%= f.collection_select :page_id, Page.all, :id, :slug, {:prompt=>true}, {:class=>"form-control"} %>
+  </div>
+  <div class="col-sm-4">
+    <%= f.label :react_component_id %><br>
+    <%= f.collection_select :react_component_id, ReactComponent.all, :id, :nickname, {:prompt=>true}, {:class=>"form-control"} %>
+  </div>
+  <div class="col-sm-4">
+    <%= f.label :order %><br>
+    <%= f.text_field :order, :class => "form-control" %>
+  </div>
+
+  <!-- <div class="col-sm-4">
+
+    <%= f.label :order %><br>
+    <select class="" name="order">
+      <option value="">1</option>
+      <option value="">2</option>
+      <option value="">3</option>
+      <option value="">4</option>
+    </select>
+  </div> -->
+</div>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

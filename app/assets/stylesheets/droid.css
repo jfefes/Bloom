@@ -1,0 +1,162 @@
+/* samsung */
+
+@media screen and (device-width: 360px) and (device-height: 640px) and (-webkit-device-pixel-ratio: 3) {
+
+ div.center-headliner {
+    color: #fff;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    margin-top: 11rem;
+    z-index: 2;
+    background: #000;
+    width: 85%;
+  }
+
+  div.center-headliner p:first-child {
+    opacity: 1;
+    font-size: 4rem;
+    font-weight: 800;
+  }
+
+  div.center-headliner p {
+    font-size: 2rem;
+  }
+
+  article.page-width-center-article {
+    /* background: #ccc; */
+    margin: 3rem auto 3rem auto;
+    text-align: center;
+    width: 85%;
+  }
+
+  div.content-container article h3 {
+      font-size: 2rem;
+  }
+
+  div.content-container article {
+    width: 95%;
+  }
+
+  div.content-container article img {
+    margin-top: 2rem;
+  }
+
+  /* products */
+
+  div.large-hero-banner div.large-hero-banner-content {
+    width: 100%;
+  }
+
+  div.large-hero-banner div.large-hero-banner-content h2 {
+    font-size: 4rem;
+    /*line-height: 6rem;*/
+  }
+
+  div.large-hero-banner div.large-hero-banner-content p {
+    font-size: 2rem;
+  }
+
+  div.large-hero-banner img {
+    height: 48rem;
+  }
+
+  div.large-hero-banner-fixed h2 {
+    margin-right: 1rem;
+    margin-top: 3rem;
+    font-size: 3rem;
+    font-weight: 400;
+  }
+
+  div.large-hero-banner-fixed img {
+      position: fixed;
+      top: 31%;
+      z-index: -1;
+      left: 1%;
+      width: 75%;
+  }
+
+  div.large-hero-banner-fixed ul.text-right {
+    text-align: right;
+    margin-right: 1rem;
+    margin-top: 2rem;
+    font-size: 2rem;
+    font-weight: 100;
+    list-style-type: none;
+  }
+
+  div.hero-banner-shopify {
+    text-align: right;
+    margin-right: 0;
+  }
+
+  div.widget-wrapper-just-form {
+    background: #fff;
+    height: 16rem;
+    width: 100%;
+  }
+
+  div.widget-interface-wrapper-just-form {
+    background: #fff;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    opacity: 1;
+    height: 16rem;
+    width: 100%;
+  }
+
+  div.slider div button {
+    width: 9rem;
+    height: 1rem;
+    font-size: 2rem;
+  }
+
+
+
+div#grain-125-just-form {
+margin-top: -11rem;
+}
+
+div#grain-175-just-form {
+margin-top: -11rem;
+}
+
+div#grain-200-just-form {
+margin-top: -2rem;
+margin-right: 0rem;
+width: 100%;
+}
+
+div#grain-100 {
+  margin-top: 5rem;
+  padding: 1rem 0 1rem 0;
+  margin: 0rem auto 1rem auto;
+}
+
+div#grain-125 {
+  margin-top: -53rem;
+  padding: 0 0 1rem 0;
+}
+
+div#grain-175 {
+  margin-top: -52rem;
+}
+
+div#grain-200 {
+margin-top: -47rem;
+}
+
+p.shopify-notice {
+width: 85%;
+margin: 1rem auto;
+font-size: 1.25rem;
+}
+
+div.product-bottom-wrapper {
+  padding: 1rem 0;
+}
+
+}

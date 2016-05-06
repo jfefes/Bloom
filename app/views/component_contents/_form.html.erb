@@ -1,0 +1,26 @@
+<%= form_for(@component_content) do |f| %>
+  <% if @component_content.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@component_content.errors.count, "error") %> prohibited this component_content from being saved:</h2>
+
+      <ul>
+      <% @component_content.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+  
+  <div class="row">
+    <div class="col-sm-6">
+      <%= f.label :value %><br>
+      <%= f.text_field :value, :class => "form-control" %>
+    </div>
+  </div>
+
+
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

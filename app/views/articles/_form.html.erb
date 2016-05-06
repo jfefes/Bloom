@@ -1,0 +1,39 @@
+<%= tinymce_assets %>
+<%= form_for @article, html: {class: "container"} do |f| %>
+
+ <% if @article.errors.any? %>
+   <div id="error_explanation">
+     <h2>
+       <%= pluralize(@article.errors.count, "error") %> prohibited this article from being saved:
+     </h2>
+     <ul>
+       <% @article.errors.full_messages.each do |msg| %>
+         <li><%= msg %></li>
+       <% end %>
+     </ul>
+   </div>
+ <% end %>
+
+  <p>
+    <%= f.label :title %><br>
+    <%= f.text_field :title, :class => "form-control" %>
+  </p>
+  
+  <div>
+    <%= f.label :image_link %>
+    <%= f.text_field :image_link, :class => "form-control" %>
+  </div>
+
+  <p>
+    <%= f.label :text %><br>
+    <%= tinymce %>
+    <%= f.text_area :text, :class => "tinymce", :rows => 20, :cols => 1 %>
+  </p>
+
+  <p>
+    <%= f.submit "Submit", class: "btn btn-success" %>
+  </p>
+<% end %>
+
+<!-- <script src="//cdn.tinymce.com/4/tinymce.min.js"></script> -->
+<!-- <script>tinymce.init({ selector:'textarea' });</script> -->

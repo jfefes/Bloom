@@ -1,0 +1,16 @@
+
+<section class="container above-fold">
+  <%= link_to 'Back to Admin', admin_path, class: "btn btn-danger" %>
+
+
+  <p id="notice"><%= notice %></p>
+    <strong>Title:</strong>
+    <%= @article.title %>
+
+    <strong>Text:</strong>
+        <%= image_tag(@article.image_link, class: "img-responsive") %>
+        <%= render html: @article.text.html_safe %>
+        
+  <%= link_to 'Edit', edit_article_path(@article) %> |
+  <%= link_to 'Back', articles_path %>
+</section>

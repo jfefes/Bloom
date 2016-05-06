@@ -1,0 +1,40 @@
+<%= link_to 'Back to Admin', admin_path, class: "btn btn-danger" %>
+
+<p id="notice"><%= notice %></p>
+
+<h1> <%= @page.title %> </h1>
+
+<div class="well">
+  <% @pageAncestry.page_component.each do |component| %>
+    <h4> <%= component.react_component.nickname %> </h4>
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-4">
+          <h4>Prop Name</h4>
+        </div>
+        <div class="col-sm-4">
+          <h4>Value</h4>
+        </div>
+      </div>
+      <% component.component_content.each do |prop| %>
+        <div class="row">
+          <div class="col-sm-4">
+            <%= prop.name %>
+          </div>
+          <div class="col-sm-4">
+            <%= prop.value %>
+          </div>
+          <div class="col-sm-4">
+            <td><%= link_to 'Edit', edit_component_content_path(prop) %></td>
+          </div>
+        </div>
+      <% end %>
+    </div>
+  <% end %>
+</div>
+
+
+
+
+<%= link_to 'Edit', edit_page_path(@page) %> |
+<%= link_to 'Back', pages_path %>

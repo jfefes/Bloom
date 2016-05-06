@@ -1,0 +1,29 @@
+<%= form_for(@component_prop) do |f| %>
+  <% if @component_prop.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@component_prop.errors.count, "error") %> prohibited this component_prop from being saved:</h2>
+
+      <ul>
+      <% @component_prop.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="row">
+    <div class="col-sm-4">
+      <%= f.label :react_component_id %><br>
+      <%= f.collection_select :react_component_id, ReactComponent.all, :id, :nickname, {:prompt=>true}, {:class=>"form-control"} %>
+    </div>
+
+    <div class="col-sm-4">
+      <%= f.label :prop_name %><br>
+      <%= f.text_field :prop_name, :class => "form-control" %>
+
+    </div>
+    </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
