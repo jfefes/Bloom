@@ -7,7 +7,7 @@ Example:
 
 * The component rendered on this page is located in /app/assets/javascripts/components/shared-components
 
-# Requirements and Setp
+# Requirements and Setup
 
 Out-of-the-box Bloom only requires a Postgres database to get started. To change the database provider, simply update config/database.rb and your gem file.
 
